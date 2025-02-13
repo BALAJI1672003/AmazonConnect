@@ -4,6 +4,7 @@ const app=express();
 app.use(express.json());
 app.get('/getUser',(req,res)=>{
     const phoneNumber=req.query.phoneNumber;
+    console.log(phoneNumber);
     if(!phoneNumber){
         res.status(400).send("Phone number is required");
     }
